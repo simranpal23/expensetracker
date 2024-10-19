@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Chewy&family=Freckle+Face&family=Gluten:wght@100..900&family=Kablammo&family=Lexend:wght@100..900&family=Mansalva&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Chewy&family=Freckle+Face&family=Gluten:wght@100..900&family=Kablammo&family=Mansalva&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <!-- Form for adding/editing expenses -->
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Your Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <select id="expense-category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="travel">Travel</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="date" id="expense-date" />
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- List of expenses -->
+        <ul id="expense-list"></ul>
+
+        <!-- Total expense calculation -->
+        <div id="total-expenses">
+            Total Expenses: $<span id="total-amount">0</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
